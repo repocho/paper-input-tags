@@ -26,7 +26,7 @@
 			<template is="dom-repeat" items="{{ tags }}">
       			<tag-item styletag="{{ styletag }}" styleicon="{{ styleicon }}" value="{{ item }}" tags="{{ tags }}" index="{{ index }}"></tag-item>
       		</template>
-  			<input is="iron-input" on-keydown="_keyDown">
+  			<input is="iron-input" on-keydown="_keyDown" placeholder$="[[placeholder]]">
 		</paper-input-container>
 
 		<template is="dom-if" if="{{ showtagcounter }}">
@@ -44,6 +44,7 @@
 	  properties: {
 	  	index: Number,
 	    label: String,
+	    placeholder: String,
 	    alwaysFloatLabel: {
 	      type: Boolean,
 	      value: false
