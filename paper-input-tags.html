@@ -76,10 +76,11 @@
 	    if (keyVal === 13 || keyVal === 188) {
 	      var tag = this._getInputValue(event.target.value);
 	      if ((tag !== '') && (this.tags.indexOf(tag) < 0)) {
-	        this._addTag(tag);
+	        this._addTag(tag.replace(/,|;/,''));
 	        event.target.value = '';
 	      }
-              return false;
+	      event.preventDefault();
+	      return false;
 	    }
 	  }
 	});
