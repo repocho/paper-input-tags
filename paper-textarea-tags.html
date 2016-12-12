@@ -84,6 +84,7 @@
           this._addTag(tag);
           event.target.value = '';
         }
+        return false;
       } else {
         if ((keyVal === 8) && (event.target.value == '')) {
           this._removeLast();
